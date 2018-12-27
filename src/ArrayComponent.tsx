@@ -1,5 +1,5 @@
 import React, { Component, SFC } from 'react';
-import { IComponentProps } from './sharedTypes';
+import { IComponentProps } from './types';
 import ObjectComponent from './ObjectComponent';
 import PrimitiveComponent from './PrimitiveComponent';
 import PropertyComponent from './PropertyComponent';

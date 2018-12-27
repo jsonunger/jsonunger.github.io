@@ -26,7 +26,8 @@
     "eject": "react-scripts eject",
     "predeploy": "yarn build",
     "deploy": "gh-pages -b master -d build",
-    "format": "prettier --write \"**/*.{js,ts,tsx,jsx,scss,css,json,prettierrc,babelrc}\""
+    "format": "prettier --write \"**/*.{js,ts,tsx,jsx,scss,css,json,prettierrc,babelrc}\"",
+    "typecheck": "tsc --noEmit"
   },
   "husky": {
     "hooks": {

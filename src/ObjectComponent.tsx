@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import ArrayComponent from './ArrayComponent';
 import PrimitiveComponent from './PrimitiveComponent';
-import { IComponentProps } from './sharedTypes';
+import { IComponentProps } from './types';
 import PropertyComponent from './PropertyComponent';
 import ToggleComponent from './ToggleComponent';
 

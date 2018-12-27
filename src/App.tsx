@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import Footer from './Footer';
-import ObjectComponent from './components/ObjectComponent';
+import ObjectComponent from './ObjectComponent';
 
 import resume from './resume.json';
 

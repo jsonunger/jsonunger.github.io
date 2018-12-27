@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { IComponentProps } from './sharedTypes';
+import { IComponentProps } from './types';
 import PropertyComponent from './PropertyComponent';
 
 type Props = IComponentProps<string | number | boolean>;
