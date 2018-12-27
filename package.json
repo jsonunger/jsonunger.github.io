@@ -24,6 +24,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
+    "predeploy": "yarn build",
+    "deploy": "gh-pages -b master -d build",
     "format": "prettier --write \"**/*.{js,ts,tsx,jsx,scss,css,json,prettierrc,babelrc}\""
   },
   "husky": {
