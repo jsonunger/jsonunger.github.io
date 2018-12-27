@@ -1,4 +1,6 @@
 import 'react-app-polyfill/ie9';
+import 'bootstrap/dist/css/bootstrap.css';
+
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
