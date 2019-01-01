@@ -4,6 +4,7 @@ import PrimitiveComponent from './PrimitiveComponent';
 import { IComponentProps } from './types';
 import PropertyComponent from './PropertyComponent';
 import ToggleComponent from './ToggleComponent';
+import { List, ListItem, Italic } from './components';
 
 interface IProps extends IComponentProps<Record<string, any>> {
     open?: boolean;
@@ -31,7 +32,6 @@ class ObjectComponent extends Component<IProps, IState> {
 
     render() {
         let subComponents: JSX.Element[] = [];
-        if (this.props.value.default) delete this.props.value.default;
         const { value, property, title, comma } = this.props;
         Object.keys(value).forEach((prop, i, arr) => {
             let val = value[prop],
@@ -51,21 +51,15 @@ class ObjectComponent extends Component<IProps, IState> {
             } else {
                 comp = <PrimitiveComponent value={val} property={prop} comma={i !== arr.length - 1} />;
             }
-            subComponents.push(<li key={i}>{comp}</li>);
+            subComponents.push(<ListItem key={i}>{comp}</ListItem>);
         });
 
         return (
             <div>
-                {property ? <PropertyComponent toggle={this.toggle} property={property} /> : null}
+                {property ? <PropertyComponent onClick={this.toggle} property={property} /> : null}
                 {property ? ':' : null}
-                <ToggleComponent show={!this.state.show} toggle={this.toggle} /> {'\u007b'}{' '}
-                {this.state.show ? (
-                    <ul className="obj collapsible">{subComponents}</ul>
-                ) : (
-                    <em className="clickable" onClick={this.toggle}>
-                        {title}
-                    </em>
-                )}{' '}
+                <ToggleComponent showExpandIcon={!this.state.show} onClick={this.toggle} /> {'\u007b'}{' '}
+                {this.state.show ? <List>{subComponents}</List> : <Italic onClick={this.toggle}>{title}</Italic>}{' '}
                 {'\u007d'}
                 {comma ? ',' : null}
             </div>

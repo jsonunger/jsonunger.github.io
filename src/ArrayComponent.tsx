@@ -4,16 +4,7 @@ import ObjectComponent from './ObjectComponent';
 import PrimitiveComponent from './PrimitiveComponent';
 import PropertyComponent from './PropertyComponent';
 import ToggleComponent from './ToggleComponent';
-
-interface IItemNamesProps {
-    names: string[];
-    toggle: () => void;
-}
-const ItemNames: SFC<IItemNamesProps> = ({ names, toggle }) => (
-    <em className="clickable" onClick={toggle}>
-        {names.length ? names.join(', ') : '...'}
-    </em>
-);
+import { List, ListItem, Italic } from './components';
 
 type Props = IComponentProps<any[]>;
 interface IState {
@@ -47,18 +38,18 @@ class ArrayComponent extends Component<Props, IState> {
             } else {
                 comp = <PrimitiveComponent {...compProps} comma={i !== arr.length - 1} />;
             }
-            subComponents.push(<li key={i}>{comp}</li>);
+            subComponents.push(<ListItem key={i}>{comp}</ListItem>);
         });
 
         return (
             <div>
-                {property ? <PropertyComponent toggle={this.toggle} property={property} /> : null}
+                {property ? <PropertyComponent onClick={this.toggle} property={property} /> : null}
                 {property ? ':' : null}
-                <ToggleComponent show={!this.state.show} toggle={this.toggle} /> {'\u005b'}{' '}
+                <ToggleComponent showExpandIcon={!this.state.show} onClick={this.toggle} /> {'\u005b'}{' '}
                 {this.state.show ? (
-                    <ul className="array collapsible">{subComponents}</ul>
+                    <List>{subComponents}</List>
                 ) : (
-                    <ItemNames names={itemNames} toggle={this.toggle} />
+                    <Italic onClick={this.toggle}>{itemNames.length ? itemNames.join(', ') : '...'}</Italic>
                 )}{' '}
                 {'\u005d'}
                 {comma ? ',' : null}
