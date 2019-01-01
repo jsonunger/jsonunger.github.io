@@ -1,6 +1,18 @@
 import React, { Component } from 'react';
-import { IComponentProps } from './sharedTypes';
+import { IComponentProps } from './types';
 import PropertyComponent from './PropertyComponent';
+import styled, { css } from 'styled-components';
+
+const colorMap = {
+    string: 'green',
+    number: 'blue',
+    boolean: 'firebrick',
+};
+const Value = styled.span<{ primitiveType: string }>`
+    ${props => css`
+        color: ${colorMap[props.primitiveType as 'string' | 'number' | 'boolean']};
+    `}
+`;
 
 type Props = IComponentProps<string | number | boolean>;
 class PrimitiveComponent extends Component<Props> {
@@ -43,7 +55,7 @@ class PrimitiveComponent extends Component<Props> {
         return (
             <div>
                 {property ? <PropertyComponent property={property} /> : null}
-                {property ? ':' : null} <span className={typeof value}>"{val}"</span>
+                {property ? ':' : null} <Value primitiveType={typeof value}>"{val}"</Value>
                 {comma ? ',' : null}
             </div>
         );
