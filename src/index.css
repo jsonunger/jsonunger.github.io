@@ -6,22 +6,6 @@ body {
     line-height: 1.42857143;
 }
 
-.boolean {
-    color: firebrick;
-}
-
-.number {
-    color: blue;
-}
-
-.string {
-    color: green;
-}
-
-.clickable {
-    cursor: pointer;
-}
-
 @media (min-width: 768px) {
     body {
         margin-bottom: 50px;
