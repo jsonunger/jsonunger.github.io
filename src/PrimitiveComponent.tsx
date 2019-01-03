@@ -2,19 +2,22 @@ import React, { Component } from 'react';
 import { IComponentProps } from './types';
 import PropertyComponent from './PropertyComponent';
 import styled, { css } from 'styled-components';
+import getTypeOf from './getTypeOf';
 
-const colorMap = {
+const colorMap: Record<string, string> = {
     string: 'green',
     number: 'blue',
     boolean: 'firebrick',
+    null: 'gray',
 };
-const Value = styled.span<{ primitiveType: string }>`
+const Value = styled.span<{ value: PossibleValueTypes }>`
     ${props => css`
-        color: ${colorMap[props.primitiveType as 'string' | 'number' | 'boolean']};
+        color: ${colorMap[getTypeOf(props.value)]};
     `}
 `;
 
-type Props = IComponentProps<string | number | boolean>;
+type PossibleValueTypes = string | number | boolean | null;
+type Props = IComponentProps<PossibleValueTypes>;
 class PrimitiveComponent extends Component<Props> {
     checkIfUrl = (value: string) => {
         return /^(https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9][a-zA-Z0-9-]+[a-zA-Z0-9]\.[^\s]{2,}|https?:\/\/(?:www\.|(?!www))[a-zA-Z0-9]\.[^\s]{2,}|www\.[a-zA-Z0-9]\.[^\s]{2,})$/i.test(
@@ -28,22 +31,28 @@ class PrimitiveComponent extends Component<Props> {
         );
     };
 
-    getValue = (value: string | number | boolean) => {
+    getValue = (value: PossibleValueTypes) => {
         if (typeof value === 'string') {
+            let node: React.ReactNode;
             if (this.checkIfUrl(value)) {
-                return (
+                node = (
                     <a href={value} target="_blank">
                         {value}
                     </a>
                 );
-            }
-            if (this.checkIfEmail(value)) {
-                return (
+            } else if (this.checkIfEmail(value)) {
+                node = (
                     <a href={`mailto:${value}`} target="_blank">
                         {value}
                     </a>
                 );
+            } else {
+                node = value;
             }
+            return <span>"{node}"</span>;
+        }
+        if (value === null) {
+            return 'null';
         }
         return value;
     };
@@ -52,12 +61,13 @@ class PrimitiveComponent extends Component<Props> {
         const { value, property, comma } = this.props;
 
         const val = this.getValue(value);
+
         return (
-            <div>
+            <span>
                 {property ? <PropertyComponent property={property} /> : null}
-                {property ? ':' : null} <Value primitiveType={typeof value}>"{val}"</Value>
+                {property ? ':' : null} <Value value={value}>{val}</Value>
                 {comma ? ',' : null}
-            </div>
+            </span>
         );
     }
 }

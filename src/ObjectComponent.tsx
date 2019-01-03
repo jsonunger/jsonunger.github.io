@@ -5,6 +5,7 @@ import { IComponentProps } from './types';
 import PropertyComponent from './PropertyComponent';
 import ToggleComponent from './ToggleComponent';
 import { List, ListItem, Italic } from './components';
+import getTypeOf from './getTypeOf';
 
 interface IProps extends IComponentProps<Record<string, any>> {
     open?: boolean;
@@ -34,11 +35,12 @@ class ObjectComponent extends Component<IProps, IState> {
         let subComponents: JSX.Element[] = [];
         const { value, property, title, comma } = this.props;
         Object.keys(value).forEach((prop, i, arr) => {
-            let val = value[prop],
-                comp;
-            if (Array.isArray(val)) {
+            let val = value[prop];
+            let valType = getTypeOf(val);
+            let comp;
+            if (valType === 'array') {
                 comp = <ArrayComponent value={val as any[]} property={prop} comma={i !== arr.length - 1} />;
-            } else if (typeof val === 'object') {
+            } else if (valType === 'object') {
                 let objTitle = val[Object.keys(val)[0]];
                 comp = (
                     <ObjectComponent
