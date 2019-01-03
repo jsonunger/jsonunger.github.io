@@ -12,76 +12,42 @@
             "level": "proficient",
             "tools": [
                 "JavaScript",
+                "GraphQL",
+                "React",
+                "Redux",
+                "TypeScript",
                 "Node",
                 "Express",
-                "Angular",
-                "Shell Scripting",
-                "React",
-                "MongoDB",
-                "Mongoose",
+                "Webpack",
+                "Gulp",
+                "SQL",
+                "MySQL",
                 "PostgreSQL",
-                "Sequelize",
-                "Git",
-                "HTML"
+                "MongoDB",
+                "Python",
+                "Django",
+                "Web Scraping"
             ]
         },
         {
             "level": "working_knowledge",
             "tools": [
-                "OAuth",
-                "Docker",
-                "DigitalOcean",
-                "Webpack",
+                "Angular 1.x",
+                "HTML",
+                "(S)CSS",
                 "jQuery",
-                "CSS/SCSS",
-                "Data Structures",
+                "Flow",
+                "Chrome Extensions",
+                "Shell Scripting",
                 "Twitter Bootstrap",
                 "Material Design",
-                "Test-Driven Development",
-                "Heroku",
-                "Cryptography",
-                "3rd-Party APIs"
+                "Amazon AWS",
+                "Heroku"
             ]
         },
         {
             "level": "some_experience",
-            "tools": ["Web Sockets", "Angular 2", "ThreeJS", "OimoJS"]
-        }
-    ],
-    "projects": [
-        {
-            "project": "VIZIT",
-            "role": "Fullstack Developer",
-            "repo_url": "https://github.com/hannahwood/vizit",
-            "deployed_url": "http://vizit.tech",
-            "date": "May 2016",
-            "details": [
-                "Educational tool for code visualization and debugging, powered by Python Tutor parsing software",
-                "Utilized MEAN stack, Docker, and Material design for initial build",
-                "Responsible for integrating backend code-parsing technology and fullstack user experience"
-            ]
-        },
-        {
-            "project": "3D Cornhole",
-            "role": "Co-Developer",
-            "repo_url": "https://github.com/icclany/stackathon",
-            "date": "Apr 2016",
-            "award": "Nerd Cred",
-            "details": [
-                "Rendered a functional Cornhole board utilizing Three.js for 3D rendering, THREEx game extensions, and Oimo.js as the physics engine",
-                "Implemented round-by-round scoring by tracking mesh locations in physical space"
-            ]
-        },
-        {
-            "project": "Stirvo",
-            "role": "Backend Developer",
-            "repo_url": "https://github.com/icclany/tessel-hackathon",
-            "date": "Mar 2016",
-            "award": "Real-World Interaction",
-            "details": [
-                "Utilized Tessel modules and Twilio to automatically stir coffee and update user seamlessly",
-                "Responsible for building the back-end using Node, Express, and Tessel"
-            ]
+            "tools": ["Docker", "OAuth", "Web Sockets", "Angular", "Ruby on Rails"]
         }
     ],
     "professional_experience": [
@@ -91,11 +57,22 @@
             "roles": [
                 {
                     "role": "Front End Engineer",
-                    "dates": "Feb 2018 - Present"
+                    "dates": "February 2018 - Present",
+                    "responsibilities": [
+                        "Designed and developed the GraphQL interfacing and UX for a new user management system",
+                        "Established official protocol for building GraphQL resolvers and mutations above REST endpoints",
+                        "Worked with Product and Design to establish a variety of A/B and multivariate tests aimed at improving platform adoption",
+                        "Upgraded the core component library to be written in TypeScript, adding necessary custom type definitions as needed for third-party libraries that were published in the official @types directory"
+                    ]
                 },
                 {
                     "role": "Junior Front End Engineer",
-                    "dates": "Nov 2016 - Feb 2018"
+                    "dates": "November 2016 - February 2018",
+                    "responsibilities": [
+                        "Overhauled the organization’s core component library across all client-facing applications given an updated style guide, and re-skinned all necessary pages or views to match the new UI",
+                        "Remodeled the rewards store, including migrating to a new partner API, developing the GraphQL interfacing for the entire domain, and building the user experience on the client-side",
+                        "Assembled system to parse and normalize scraped data from online booking tool, combining HTML parsing, form data, and web storage values"
+                    ]
                 }
             ]
         },
@@ -105,7 +82,7 @@
             "roles": [
                 {
                     "role": "Teaching Fellow",
-                    "dates": "Jun - Sep 2016",
+                    "dates": "June - September 2016",
                     "responsibilities": [
                         "Mentor a group of 6 students by conducting code reviews, holding weekly group and one-on-one meetings, and pair programming",
                         "Develop and lead full reviews of key curriculum prior to major milestone checkpoints",
@@ -122,7 +99,7 @@
             "roles": [
                 {
                     "role": "Marketing & Insights Associate",
-                    "dates": "Jan 2015 - Jan 2016",
+                    "dates": "January 2015 - January 2016",
                     "responsibilities": [
                         "Established new full-time position",
                         "Implemented project analytics for future creative decisions",
@@ -132,7 +109,7 @@
                 },
                 {
                     "role": "Undergraduate Business Intern",
-                    "dates": "Oct 2014 - Jan 2015",
+                    "dates": "October 2014 - January 2015",
                     "responsibilities": [
                         "Produced content for various company social media platforms",
                         "Provided background research and competitive analysis for weekly business meetings"
@@ -146,7 +123,7 @@
             "roles": [
                 {
                     "role": "Digital Product Development Intern",
-                    "dates": "May - Aug 2012",
+                    "dates": "May - August 2012",
                     "responsibilities": [
                         "Determined audience target segments for third-party in-app advertisements by analyzing existing application statistics",
                         "Identified trends in application variety and popularity in the marketplace"
@@ -154,12 +131,60 @@
                 },
                 {
                     "role": "Digital & Social Media MArketing Analysis Intern",
-                    "dates": "May - Aug 2012",
+                    "dates": "May - August 2012",
                     "responsibilities": [
                         "Managed and maintained social media accounts for over 100 musical artists",
                         "Analyzed previous post performance to optimize future"
                     ]
                 }
+            ]
+        }
+    ],
+    "projects": [
+        {
+            "project": "Pitch Music",
+            "role": "Full Stack Developer",
+            "repo_url": "https://github.com/jsonunger/pitch",
+            "date": "October 2016",
+            "award": null,
+            "details": [
+                "Full stack JavaScript music streaming web application similar in style to Spotify",
+                "Built with a Node/Express/PostgreSQL back-end and a React/Redux and Bootstrap front end",
+                "Implemented back-end authentication and wrote the full front end experience"
+            ]
+        },
+        {
+            "project": "VIZIT",
+            "role": "Fullstack Developer",
+            "repo_url": "https://github.com/hannahwood/vizit",
+            "date": "May 2016",
+            "award": null,
+            "details": [
+                "Educational tool for code visualization and debugging, powered by Python Tutor parsing software",
+                "Utilized MEAN stack, Docker, and Material design for initial build",
+                "Responsible for integrating backend code-parsing technology and fullstack user experience"
+            ]
+        },
+        {
+            "project": "3D Cornhole",
+            "role": "Co-Developer",
+            "repo_url": "https://github.com/icclany/stackathon",
+            "date": "April 2016",
+            "award": "Nerd Cred",
+            "details": [
+                "Rendered a functional Cornhole board utilizing Three.js for 3D rendering, THREEx game extensions, and Oimo.js as the physics engine",
+                "Implemented round-by-round scoring by tracking mesh locations in physical space"
+            ]
+        },
+        {
+            "project": "Stirvo",
+            "role": "Backend Developer",
+            "repo_url": "https://github.com/icclany/tessel-hackathon",
+            "date": "March 2016",
+            "award": "Real-World Interaction",
+            "details": [
+                "Utilized Tessel modules and Twilio to automatically stir coffee and update user seamlessly",
+                "Responsible for building the back-end using Node, Express, and Tessel"
             ]
         }
     ],
