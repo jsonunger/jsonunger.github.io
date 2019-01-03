@@ -3,6 +3,7 @@ import { IComponentProps } from './types';
 import PropertyComponent from './PropertyComponent';
 import styled, { css } from 'styled-components';
 import getTypeOf from './getTypeOf';
+import { Link } from './components';
 
 const colorMap: Record<string, string> = {
     string: 'green',
@@ -35,17 +36,9 @@ class PrimitiveComponent extends Component<Props> {
         if (typeof value === 'string') {
             let node: React.ReactNode;
             if (this.checkIfUrl(value)) {
-                node = (
-                    <a href={value} target="_blank">
-                        {value}
-                    </a>
-                );
+                node = <Link href={value}>{value}</Link>;
             } else if (this.checkIfEmail(value)) {
-                node = (
-                    <a href={`mailto:${value}`} target="_blank">
-                        {value}
-                    </a>
-                );
+                node = <Link href={`mailto:${value}`}>{value}</Link>;
             } else {
                 node = value;
             }

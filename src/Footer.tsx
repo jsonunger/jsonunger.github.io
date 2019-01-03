@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import styled from 'styled-components';
+import { Link } from './components';
 
 const FooterWrapper = styled.div`
     background-color: white;
@@ -25,8 +26,9 @@ class Footer extends Component {
             <FooterWrapper>
                 <FooterContent>
                     <FooterText>
-                        Made using <a href="https://facebook.github.io/create-react-app">Create React App</a>. The repo
-                        is available on <a href="https://github.com/jsonunger/jsonunger.github.io">GitHub</a>.
+                        Made using <Link href="https://facebook.github.io/create-react-app">Create React App</Link>. The
+                        repo is available on <Link href="https://github.com/jsonunger/jsonunger.github.io">GitHub</Link>
+                        . View my resume on <Link href="http://bit.ly/jsonunger-resume">Dropbox</Link>.
                     </FooterText>
                 </FooterContent>
             </FooterWrapper>
