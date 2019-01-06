@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { SFC } from 'react';
 import styled, { css } from 'styled-components';
 
 const PropertyComponentWrapper = styled.span`
@@ -15,11 +15,8 @@ interface IProps extends Pick<React.HTMLProps<HTMLSpanElement>, 'onClick'> {
     property: string;
 }
 
-class PropertyComponent extends Component<IProps> {
-    render() {
-        const { property, ...props } = this.props;
-        return <PropertyComponentWrapper {...props}>{property}</PropertyComponentWrapper>;
-    }
-}
+const PropertyComponent: SFC<IProps> = ({ property, ...props }) => (
+    <PropertyComponentWrapper {...props}>{property}</PropertyComponentWrapper>
+);
 
 export default PropertyComponent;

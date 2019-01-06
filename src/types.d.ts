@@ -3,3 +3,5 @@ export interface IComponentProps<V extends any> {
     property?: string;
     comma?: boolean;
 }
+
+export type Omit<T, K> = Pick<T, Exclude<keyof T, K>>;
