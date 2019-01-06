@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { SFC } from 'react';
 import styled from 'styled-components';
 
 import Footer from './Footer';
@@ -14,17 +14,13 @@ const ResumeWrapper = styled.div`
     }
 `;
 
-class App extends Component {
-    render() {
-        return (
-            <div className="row">
-                <ResumeWrapper>
-                    <ObjectComponent value={resume} open={true} title="Jason's JSON Resume" />
-                </ResumeWrapper>
-                <Footer />
-            </div>
-        );
-    }
-}
+const App: SFC = () => (
+    <div className="row">
+        <ResumeWrapper>
+            <ObjectComponent value={resume} open={true} title="Jason's JSON Resume" />
+        </ResumeWrapper>
+        <Footer />
+    </div>
+);
 
 export default App;

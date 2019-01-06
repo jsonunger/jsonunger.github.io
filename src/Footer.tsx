@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React, { SFC } from 'react';
 import styled from 'styled-components';
 import { Link } from './components';
 
@@ -20,20 +20,16 @@ const FooterText = styled.p`
     margin-bottom: 0;
 `;
 
-class Footer extends Component {
-    render() {
-        return (
-            <FooterWrapper>
-                <FooterContent>
-                    <FooterText>
-                        Made using <Link href="https://facebook.github.io/create-react-app">Create React App</Link>. The
-                        repo is available on <Link href="https://github.com/jsonunger/jsonunger.github.io">GitHub</Link>
-                        . View my resume on <Link href="http://bit.ly/jsonunger-resume">Dropbox</Link>.
-                    </FooterText>
-                </FooterContent>
-            </FooterWrapper>
-        );
-    }
-}
+const Footer: SFC = () => (
+    <FooterWrapper>
+        <FooterContent>
+            <FooterText>
+                Made using <Link href="https://facebook.github.io/create-react-app">Create React App</Link>. The repo is
+                available on <Link href="https://github.com/jsonunger/jsonunger.github.io">GitHub</Link>. View my resume
+                on <Link href="http://bit.ly/jsonunger-resume">Dropbox</Link>.
+            </FooterText>
+        </FooterContent>
+    </FooterWrapper>
+);
 
 export default Footer;
