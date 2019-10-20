@@ -15,7 +15,7 @@
     "husky": "^1.2.1",
     "lint-staged": "^8.1.0",
     "prettier": "^1.15.3",
-    "react": "^16.7.0",
+    "react": "^16.10.2",
     "react-app-polyfill": "^0.2.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.2",
