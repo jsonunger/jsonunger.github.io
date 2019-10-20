@@ -19,13 +19,13 @@
                 "Node",
                 "Express",
                 "Webpack",
+                "Python",
+                "Django",
                 "Gulp",
                 "SQL",
                 "MySQL",
                 "PostgreSQL",
                 "MongoDB",
-                "Python",
-                "Django",
                 "Web Scraping"
             ]
         },
@@ -59,6 +59,7 @@
                     "role": "Front End Engineer",
                     "dates": "February 2018 - Present",
                     "responsibilities": [
+                        "Contribute to expansion and maintenance of the React-based single page application and browser extension",
                         "Designed and developed the GraphQL interfacing and UX for a new user management system",
                         "Established official protocol for building GraphQL resolvers and mutations above REST endpoints",
                         "Worked with Product and Design to establish a variety of A/B and multivariate tests aimed at improving platform adoption",
