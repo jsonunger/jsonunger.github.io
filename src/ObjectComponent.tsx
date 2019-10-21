@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React, { FC, useState, useEffect } from 'react';
 import ArrayComponent from './ArrayComponent';
 import PrimitiveComponent from './PrimitiveComponent';
 import { IComponentProps } from './types';
@@ -6,15 +6,23 @@ import PropertyComponent from './PropertyComponent';
 import ToggleComponent from './ToggleComponent';
 import { List, ListItem, Italic } from './components';
 import getTypeOf from './getTypeOf';
-import { WithToggleProps, withToggle } from './hoc/withToggle';
-import { compose, lifecycle } from 'recompose';
 
 interface IProps extends IComponentProps<Record<string, any>> {
     open?: boolean;
     title?: string;
 }
 
-const ObjectComponentClass: SFC<IProps & WithToggleProps> = ({ value, property, title, comma, toggle, isShowing }) => {
+const ObjectComponent: FC<IProps> = ({ value, property, title, comma, open }) => {
+    const [isShowing, setIsShowing] = useState(false);
+
+    useEffect(() => {
+        if (open || property === 'about') {
+            setIsShowing(true);
+        }
+    }, []);
+
+    const toggle = () => setIsShowing(!isShowing);
+
     let subComponents: JSX.Element[] = [];
     Object.keys(value).forEach((prop, i, arr) => {
         let val = value[prop];
@@ -48,15 +56,5 @@ const ObjectComponentClass: SFC<IProps & WithToggleProps> = ({ value, property, 
         </div>
     );
 };
-
-const ObjectComponent = compose<IProps & WithToggleProps, IProps>(
-    withToggle<IProps & WithToggleProps>(),
-    lifecycle<IProps & WithToggleProps, {}>({
-        componentWillMount() {
-            const { open, property, show } = this.props;
-            if (open || property === 'about') show();
-        },
-    }),
-)(ObjectComponentClass);
 
 export default ObjectComponent;

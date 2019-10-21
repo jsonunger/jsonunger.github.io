@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 import { Link } from './components';
 
@@ -20,7 +20,7 @@ const FooterText = styled.p`
     margin-bottom: 0;
 `;
 
-const Footer: SFC = () => (
+const Footer: FC = () => (
     <FooterWrapper>
         <FooterContent>
             <FooterText>

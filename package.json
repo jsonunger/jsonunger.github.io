@@ -1,5 +1,5 @@
 {
-  "name": "website2",
+  "name": "website",
   "version": "0.1.0",
   "private": true,
   "homepage": "https://jsonunger.com",
@@ -8,18 +8,17 @@
     "@types/node": "^10.12.18",
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
-    "@types/recompose": "^0.30.2",
     "@types/styled-components": "^4.1.4",
+    "babel-preset-react-app": "7.0.0",
     "bootstrap": ">=4.1.2",
     "gh-pages": "^2.0.1",
-    "husky": "^1.2.1",
-    "lint-staged": "^8.1.0",
+    "husky": "^2.0.0",
     "prettier": "^1.15.3",
+    "pretty-quick": "^2.0.0",
     "react": "^16.7.0",
     "react-app-polyfill": "^0.2.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.2",
-    "recompose": "^0.30.0",
     "styled-components": "^4.1.3",
     "typescript": "^3.2.2"
   },
@@ -35,14 +34,8 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged"
+      "pre-commit": "pretty-quick --staged"
     }
-  },
-  "lint-staged": {
-    "*.{js,ts,tsx,jsx,scss,css,json,prettierrc,babelrc}": [
-      "prettier --write",
-      "git add"
-    ]
   },
   "eslintConfig": {
     "extends": "react-app"

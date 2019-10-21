@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 const ToggleComponentWrapper = styled.div`
@@ -17,7 +17,7 @@ interface IProps {
     onClick: React.MouseEventHandler<HTMLDivElement>;
 }
 
-const ToggleComponent: SFC<IProps> = ({ showExpandIcon, ...props }) => (
+const ToggleComponent: FC<IProps> = ({ showExpandIcon, ...props }) => (
     <ToggleComponentWrapper {...props}>
         <strong>{showExpandIcon ? '+' : '-'}</strong>
     </ToggleComponentWrapper>

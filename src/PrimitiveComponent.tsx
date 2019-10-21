@@ -1,10 +1,9 @@
-import React, { SFC } from 'react';
+import React, { FC } from 'react';
 import { IComponentProps } from './types';
 import PropertyComponent from './PropertyComponent';
 import styled, { css } from 'styled-components';
 import getTypeOf from './getTypeOf';
 import { Link } from './components';
-import { withProps } from 'recompose';
 
 const colorMap: Record<string, string> = {
     string: 'green',
@@ -49,21 +48,12 @@ const getValue = (value: PossibleValueTypes) => {
 type PossibleValueTypes = string | number | boolean | null;
 type Props = IComponentProps<PossibleValueTypes>;
 
-interface IWithVal {
-    val: React.ReactNode;
-}
-const withVal = withProps<Props & IWithVal, Props>(props => ({
-    ...props,
-    val: getValue(props.value),
-}));
-
-const PrimitiveComponentClass: SFC<Props & IWithVal> = ({ value, property, comma, val }) => (
+const PrimitiveComponent: FC<Props> = ({ value, property, comma }) => (
     <span>
         {property ? <PropertyComponent property={property} /> : null}
-        {property ? ':' : null} <Value value={value}>{val}</Value>
+        {property ? ':' : null} <Value value={value}>{getValue(value)}</Value>
         {comma ? ',' : null}
     </span>
 );
 
-const PrimitiveComponent = withVal(PrimitiveComponentClass);
 export default PrimitiveComponent;

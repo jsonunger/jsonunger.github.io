@@ -1,4 +1,4 @@
-import React, { SFC } from 'react';
+import React, { FC } from 'react';
 import styled from 'styled-components';
 
 import Footer from './Footer';
@@ -14,7 +14,7 @@ const ResumeWrapper = styled.div`
     }
 `;
 
-const App: SFC = () => (
+const App: FC = () => (
     <div className="row">
         <ResumeWrapper>
             <ObjectComponent value={resume} open={true} title="Jason's JSON Resume" />

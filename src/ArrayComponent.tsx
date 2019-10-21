@@ -1,15 +1,18 @@
-import React, { SFC } from 'react';
+import React, { FC, useState } from 'react';
 import { IComponentProps } from './types';
 import ObjectComponent from './ObjectComponent';
 import PrimitiveComponent from './PrimitiveComponent';
 import PropertyComponent from './PropertyComponent';
 import ToggleComponent from './ToggleComponent';
 import { List, ListItem, Italic } from './components';
-import { withToggle, WithToggleProps } from './hoc/withToggle';
 
-type Props = IComponentProps<any[]> & WithToggleProps;
+type Props = IComponentProps<any[]>;
 
-const ArrayComponentClass: SFC<Props> = ({ value, property, comma, toggle, isShowing }) => {
+const ArrayComponent: FC<Props> = ({ value, property, comma }) => {
+    const [isShowing, setIsShowing] = useState(false);
+
+    const toggle = () => setIsShowing(!isShowing);
+
     let subComponents: JSX.Element[] = [];
     let itemNames: string[] = [];
     value.forEach((val, i, arr) => {
@@ -43,5 +46,4 @@ const ArrayComponentClass: SFC<Props> = ({ value, property, comma, toggle, isSho
     );
 };
 
-const ArrayComponent = withToggle<Props>()(ArrayComponentClass);
 export default ArrayComponent;
