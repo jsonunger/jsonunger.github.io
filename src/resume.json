@@ -2,10 +2,10 @@
     "about": {
         "name": "Jason Unger",
         "email": "jason@jsonunger.com",
-        "phone": "(914) 584-5745",
-        "location": "New York, NY",
         "github": "https://github.com/jsonunger",
-        "linkedin": "http://linkedin.com/in/jasonunger"
+        "linkedin": "http://linkedin.com/in/jasonunger",
+        "phone": "(914) 584-5745",
+        "location": "New York, NY"
     },
     "skills": [
         {
@@ -18,6 +18,8 @@
                 "TypeScript",
                 "Node",
                 "Express",
+                "SCSS",
+                "CSS-in-JS",
                 "Webpack",
                 "Python",
                 "Django",
@@ -34,7 +36,6 @@
             "tools": [
                 "Angular 1.x",
                 "HTML",
-                "(S)CSS",
                 "jQuery",
                 "Flow",
                 "Chrome Extensions",
@@ -52,7 +53,7 @@
     ],
     "professional_experience": [
         {
-            "company": "Rocketrip",
+            "company": "Rocketrip, Inc.",
             "company_url": "https://www.rocketrip.com/",
             "roles": [
                 {
@@ -63,7 +64,7 @@
                         "Designed and developed the GraphQL interfacing and UX for a new user management system",
                         "Established official protocol for building GraphQL resolvers and mutations above REST endpoints",
                         "Worked with Product and Design to establish a variety of A/B and multivariate tests aimed at improving platform adoption",
-                        "Upgraded the core component library to be written in TypeScript, adding necessary custom type definitions as needed for third-party libraries that were published in the official @types directory"
+                        "Upgraded the core component library and web application to be written in TypeScript, adding necessary custom type definitions as needed for third-party libraries that were published in the official @types directory"
                     ]
                 },
                 {
@@ -82,14 +83,23 @@
             "company_url": "https://www.fullstackacademy.com/",
             "roles": [
                 {
+                    "role": "Foundations Mentors (Part-Time)",
+                    "dates": "February 2018 - Present",
+                    "responsibilities": [
+                        "Mentor incoming students for Fullstack Academy's Software Engineering Immersive bootcamps",
+                        "Monitor online help desk and assist students in solving technical problems with coding fundamentals and JavaScript",
+                        "Grade and provide feedback on student assessments"
+                    ]
+                },
+                {
                     "role": "Teaching Fellow",
                     "dates": "June - September 2016",
                     "responsibilities": [
-                        "Mentor a group of 6 students by conducting code reviews, holding weekly group and one-on-one meetings, and pair programming",
-                        "Develop and lead full reviews of key curriculum prior to major milestone checkpoints",
-                        "Complete approximately 20 help tickets per week to get students through code blocks",
-                        "Maintain and improve functionality of the school’s learning management system",
-                        "Conduct 2-3 admissions interviews per week for prospective Fullstack Academy students"
+                        "Mentored a group of 6 students by conducting code reviews, holding weekly group and one-on-one meetings, and pair programming",
+                        "Developed and led reviews of key concepts prior to major milestone assessments for all students",
+                        "Completed approximately 20 help tickets per week to get students through code blocks",
+                        "Improved functionality of the school’s proprietary learning management system",
+                        "Conducted 2-3 admissions interviews per week for prospective Fullstack Academy students"
                     ]
                 }
             ]
