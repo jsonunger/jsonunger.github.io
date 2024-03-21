@@ -31,18 +31,18 @@ const ArrayComponent: FC<Props> = ({ value, property, comma }) => {
     });
 
     return (
-        <div>
+        <>
             {property ? <PropertyComponent onClick={toggle} property={property} /> : null}
             {property ? ':' : null}
-            <ToggleComponent showExpandIcon={!isShowing} onClick={toggle} /> {'\u005b'}{' '}
+            {!!value.length && <ToggleComponent showExpandIcon={!isShowing} onClick={toggle} />} {'\u005b'}{' '}
             {isShowing ? (
                 <List>{subComponents}</List>
-            ) : (
+            ) : value.length ? (
                 <Italic onClick={toggle}>{itemNames.length ? itemNames.join(', ') : '...'}</Italic>
-            )}{' '}
+            ) : null}{' '}
             {'\u005d'}
             {comma ? ',' : null}
-        </div>
+        </>
     );
 };
 

@@ -49,11 +49,11 @@ type PossibleValueTypes = string | number | boolean | null;
 type Props = IComponentProps<PossibleValueTypes>;
 
 const PrimitiveComponent: FC<Props> = ({ value, property, comma }) => (
-    <span>
+    <>
         {property ? <PropertyComponent property={property} /> : null}
         {property ? ':' : null} <Value value={value}>{getValue(value)}</Value>
         {comma ? ',' : null}
-    </span>
+    </>
 );
 
 export default PrimitiveComponent;

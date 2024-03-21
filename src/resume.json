@@ -53,14 +53,35 @@
     ],
     "professional_experience": [
         {
+            "company": "Zinnia (acquired Policygenius Inc. in April 2023)",
+            "company_url": "https://zinnia.com/",
+            "roles": [
+                {
+                    "role": "Engineering Manager",
+                    "dates": "August 2023 - Present",
+                    "responsibilities": []
+                },
+                {
+                    "role": "Senior Software Engineer II / Team Lead",
+                    "dates": "July 2022 - August 2023",
+                    "responsibilities": []
+                },
+                {
+                    "role": "Senior Software Engineer I",
+                    "dates": "October 2020 - July 2022",
+                    "responsibilities": []
+                }
+            ]
+        },
+        {
             "company": "Rocketrip, Inc.",
             "company_url": "https://www.rocketrip.com/",
             "roles": [
                 {
                     "role": "Front End Engineer",
-                    "dates": "February 2018 - Present",
+                    "dates": "February 2018 - October 2020",
                     "responsibilities": [
-                        "Contribute to expansion and maintenance of the React-based single page application and browser extension",
+                        "Contributed to expansion and maintenance of the React-based single page application and browser extension",
                         "Designed and developed the GraphQL interfacing and UX for a new user management system",
                         "Established official protocol for building GraphQL resolvers and mutations above REST endpoints",
                         "Worked with Product and Design to establish a variety of A/B and multivariate tests aimed at improving platform adoption",
@@ -84,11 +105,11 @@
             "roles": [
                 {
                     "role": "Foundations Mentors (Part-Time)",
-                    "dates": "February 2018 - Present",
+                    "dates": "February 2018 - June 2021",
                     "responsibilities": [
-                        "Mentor incoming students for Fullstack Academy's Software Engineering Immersive bootcamps",
-                        "Monitor online help desk and assist students in solving technical problems with coding fundamentals and JavaScript",
-                        "Grade and provide feedback on student assessments"
+                        "Mentored incoming students for Fullstack Academy's Software Engineering Immersive bootcamps",
+                        "Monitored online help desk and assisted students in solving technical problems with coding fundamentals and JavaScript",
+                        "Graded and provided feedback on student assessments"
                     ]
                 },
                 {
