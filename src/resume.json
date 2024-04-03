@@ -7,50 +7,6 @@
         "phone": "(914) 584-5745",
         "location": "New York, NY"
     },
-    "skills": [
-        {
-            "level": "proficient",
-            "tools": [
-                "JavaScript",
-                "GraphQL",
-                "React",
-                "Redux",
-                "TypeScript",
-                "Node",
-                "Express",
-                "SCSS",
-                "CSS-in-JS",
-                "Webpack",
-                "Python",
-                "Django",
-                "Gulp",
-                "SQL",
-                "MySQL",
-                "PostgreSQL",
-                "MongoDB",
-                "Web Scraping"
-            ]
-        },
-        {
-            "level": "working_knowledge",
-            "tools": [
-                "Angular 1.x",
-                "HTML",
-                "jQuery",
-                "Flow",
-                "Chrome Extensions",
-                "Shell Scripting",
-                "Twitter Bootstrap",
-                "Material Design",
-                "Amazon AWS",
-                "Heroku"
-            ]
-        },
-        {
-            "level": "some_experience",
-            "tools": ["Docker", "OAuth", "Web Sockets", "Angular", "Ruby on Rails"]
-        }
-    ],
     "professional_experience": [
         {
             "company": "Zinnia (acquired Policygenius Inc. in April 2023)",
@@ -59,17 +15,31 @@
                 {
                     "role": "Engineering Manager",
                     "dates": "August 2023 - Present",
-                    "responsibilities": []
+                    "responsibilities": [
+                        "Manage a team of seven engineers after pitching, communicating, and driving a team consolidation effort to best align with organizational priorities",
+                        "Adapted existing processes to assist in the onboarding of multiple new hires post-acquisition",
+                        "Collaborate with product and design partners to develop a product vision, strategy, and roadmap to increase digital, self-service life insurance applications",
+                        "Founded and lead a steering committee to set a long-term vision and clear contribution and consumption guidelines for a cross-functional, cross-team data collection framework"
+                    ]
                 },
                 {
                     "role": "Senior Software Engineer II / Team Lead",
                     "dates": "July 2022 - August 2023",
-                    "responsibilities": []
+                    "responsibilities": [
+                        "Drafted the team’s technical vision and facilitated quarterly technical goals to push towards that vision",
+                        "Partnered with my engineering manager to course correct an under-performing engineer",
+                        "Embraced additional responsibilities while the team’s product manager was out on leave",
+                        "Acted as technical lead on external API capabilities for marketing affiliates, interfacing directly with cross-team and outside partners to ensure alignment"
+                    ]
                 },
                 {
                     "role": "Senior Software Engineer I",
                     "dates": "October 2020 - July 2022",
-                    "responsibilities": []
+                    "responsibilities": [
+                        "Enhanced the stability of the team’s primary codebases through a full conversion to TypeScript in strict mode",
+                        "Evangelized GraphQL best and modern practices to the broader organization",
+                        "Mentored junior engineers through structured pair programming, code review, and promoting a culture of early feedback through proofs of concept"
+                    ]
                 }
             ]
         },
@@ -172,52 +142,52 @@
             ]
         }
     ],
-    "projects": [
+    "technical_skills": [
         {
-            "project": "Pitch Music",
-            "role": "Full Stack Developer",
-            "repo_url": "https://github.com/jsonunger/pitch",
-            "date": "October 2016",
-            "award": null,
-            "details": [
-                "Full stack JavaScript music streaming web application similar in style to Spotify",
-                "Built with a Node/Express/PostgreSQL back-end and a React/Redux and Bootstrap front end",
-                "Implemented back-end authentication and wrote the full front end experience"
+            "level": "proficient",
+            "tools": [
+                "JavaScript",
+                "TypeScript",
+                "GraphQL",
+                "React",
+                "Node",
+                "HTML",
+                "SCSS",
+                "CSS-in-JS",
+                "Ruby",
+                "Ruby on Rails",
+                "Golang",
+                "Python",
+                "Django",
+                "Webpack",
+                "Gulp",
+                "SQL",
+                "MySQL",
+                "PostgreSQL",
+                "MongoDB",
+                "Buildkite",
+                "Datadog"
             ]
         },
         {
-            "project": "VIZIT",
-            "role": "Fullstack Developer",
-            "repo_url": "https://github.com/hannahwood/vizit",
-            "date": "May 2016",
-            "award": null,
-            "details": [
-                "Educational tool for code visualization and debugging, powered by Python Tutor parsing software",
-                "Utilized MEAN stack, Docker, and Material design for initial build",
-                "Responsible for integrating backend code-parsing technology and fullstack user experience"
+            "level": "working_knowledge",
+            "tools": [
+                "Angular 1.x",
+                "jQuery",
+                "Flow",
+                "Chrome Extensions",
+                "Shell Scripting",
+                "Twitter Bootstrap",
+                "Material Design",
+                "Amazon AWS",
+                "Google Cloud Services",
+                "Heroku",
+                "Web Scraping"
             ]
         },
         {
-            "project": "3D Cornhole",
-            "role": "Co-Developer",
-            "repo_url": "https://github.com/icclany/stackathon",
-            "date": "April 2016",
-            "award": "Nerd Cred",
-            "details": [
-                "Rendered a functional Cornhole board utilizing Three.js for 3D rendering, THREEx game extensions, and Oimo.js as the physics engine",
-                "Implemented round-by-round scoring by tracking mesh locations in physical space"
-            ]
-        },
-        {
-            "project": "Stirvo",
-            "role": "Backend Developer",
-            "repo_url": "https://github.com/icclany/tessel-hackathon",
-            "date": "March 2016",
-            "award": "Real-World Interaction",
-            "details": [
-                "Utilized Tessel modules and Twilio to automatically stir coffee and update user seamlessly",
-                "Responsible for building the back-end using Node, Express, and Tessel"
-            ]
+            "level": "some_experience",
+            "tools": ["Docker", "OAuth", "Web Sockets", "Angular"]
         }
     ],
     "education": [

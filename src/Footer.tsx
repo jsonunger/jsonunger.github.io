@@ -25,12 +25,8 @@ const Footer: FC = () => (
         <FooterContent>
             <FooterText>
                 Made using <Link href="https://facebook.github.io/create-react-app">Create React App</Link>. The repo is
-                available on <Link href="https://github.com/jsonunger/jsonunger.github.io">GitHub</Link>. View my resume
-                on{' '}
-                <Link href="https://www.dropbox.com/s/pb3xcl1d47dyqib/Jason%20Unger%20-%20Resume.pdf?dl=0">
-                    Dropbox
-                </Link>
-                .
+                available on <Link href="https://github.com/jsonunger/jsonunger.github.io">GitHub</Link>. View my resume{' '}
+                <Link href="/resume.pdf">here</Link>.
             </FooterText>
         </FooterContent>
     </FooterWrapper>
